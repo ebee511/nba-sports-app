@@ -1,25 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
+import SearchForm from './components/SearchForm.js'
+import Teams from './components/Teams.js';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      teams: []
+    }
+  }
+
+  componentDidMount() {
+    //Fetches data from SportsDB
+    const URL = 'https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4387';
+    axios.get(URL)
+      .then(res => {
+        const teams = res.data.teams; // Grabs the team data
+        if(typeof teams === 'object'){
+          this.setState({ teams }) // Sets state of app
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+
+  onInputTyping(e){
+    //to prevent from browser reloading again
+    e.preventDefault();
+    console.log('Hello World');
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header className="sports_header">
+          <h1 className="sports_header_title">NBA Team Encyclopedia</h1>
         </header>
+        <main>
+          <SearchForm {...this.state} onInputTyping={this.onInputTyping}/>
+          <Teams {...this.state}/>
+        </main>
       </div>
     );
   }

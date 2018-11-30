@@ -22,11 +22,55 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* HEADER */
+.sports_header {
+  background-color: dodgerblue;
 }
+
+.sports_header_title {
+  background-color: dodgerblue;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* SEARCH INPUT */
+.sports_search_form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.sports_search_input {
+  font-size: 16px;
+  border-width: 0 0 3px 0;
+  border-bottom-color: orange;
+}
+
+.sports_search_button {
+  padding: 4px 7px 2px;
+  margin-left: 5px;
+  border-width: 3px;
+  font-size: 13px;
+  border-color: orange;
+  text-transform: uppercase;
+}
+
+/* TEAM LIST */
+.sports_team_list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.sports_team_list_item {
+  margin: auto;
+  border: 2px solid black;
+  padding: 50px;
+}
+
+.sports_team_img {
+  display: block;
+  margin: auto;
+  padding: 30px;
+}
+
