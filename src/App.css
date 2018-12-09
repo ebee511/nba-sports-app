@@ -23,12 +23,9 @@
 }
 
 /* HEADER */
-.sports_header {
-  background-color: dodgerblue;
-}
-
 .sports_header_title {
-  background-color: dodgerblue;
+  background-color: #1D428A;
+  color: #fff;
   margin: 0;
   padding: 10px 0;
 }
@@ -42,7 +39,7 @@
 .sports_search_input {
   font-size: 16px;
   border-width: 0 0 3px 0;
-  border-bottom-color: orange;
+  border-bottom-color: #1D428A;
 }
 
 .sports_search_button {
@@ -50,8 +47,11 @@
   margin-left: 5px;
   border-width: 3px;
   font-size: 13px;
-  border-color: orange;
+  border-color: #F51F1F;
+  background-color: #F51F1F;
   text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
 }
 
 /* TEAM LIST */
@@ -63,14 +63,41 @@
 }
 
 .sports_team_list_item {
-  margin: auto;
+  margin: 10px auto;
   border: 2px solid black;
-  padding: 50px;
+  padding: 40px;
 }
 
 .sports_team_img {
   display: block;
   margin: auto;
   padding: 30px;
+}
+
+.sports_team_button {
+  padding: 4px 7px 2px;
+  margin-left: 5px;
+  border-width: 3px;
+  font-size: 13px;
+  border-color: #000;
+  background-color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+
+a, 
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:link {
+  text-decoration: none;
 }
 
