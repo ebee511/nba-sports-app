@@ -29,8 +29,9 @@ class App extends Component {
 
 
   onInputTyping(e){
-    //to prevent from browser reloading again
+    //to prevent from browser reloading again when you click on button
     e.preventDefault();
+    //Check that button is working with console statement
     console.log('Hello World');
   }
 
