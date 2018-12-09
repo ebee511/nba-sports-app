@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TeamName from './TeamName.js';
+import { Link } from 'react-router-dom';
 
 export default class Teams extends Component {
 
@@ -20,7 +20,15 @@ export default class Teams extends Component {
 							src={team.strTeamBadge} 
 							alt='NBA Team Logo'
 						/>
-							{ team.strTeam.length < 16 ? `${ team.strTeam }` : `${ team.strTeam.substring(0, 16)}...` }
+							<p>{ team.strTeam.length < 16 ? `${ team.strTeam }` : `${ team.strTeam.substring(0, 16)}...` }
+							</p>
+						<button className="sports_team_button">
+							<Link to={{ 
+								pathname: `/teamdetails/${team.idTeam}` 
+							}}>
+								+ View More
+							</Link>
+						</button>
 					</li>
 				))}
 			</ul>
