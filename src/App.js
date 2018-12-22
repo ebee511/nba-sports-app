@@ -2,29 +2,27 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SearchForm from './components/SearchForm.js'
 import Teams from './components/Teams.js';
+import TeamDetails from './components/TeamDetails.js';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      teams: []
-    }
-  }
-
-  componentDidMount() {
-    //Fetches data from SportsDB
-    const URL = 'https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4387';
-    axios.get(URL)
-      .then(res => {
-        const teams = res.data.teams; // Grabs the team data
-        if(typeof teams === 'object'){
-          this.setState({ teams }) // Sets state of app
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });
+ state = {
+  teams: []
+ }
+ 
+ componentDidMount() {
+  //Fetches data from SportsDB
+  const URL = 'https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4387';
+  axios.get(URL)
+    .then(res => {
+      const teams = res.data.teams; // Grabs the team data
+      if(typeof teams === 'object'){
+        this.setState({ teams }) // Sets state of app
+      }
+    })
+    .catch(error => {
+      console.log(error);
+    });
   }
 
 
