@@ -4,13 +4,21 @@ import App from "../App.js";
 import TeamDetails from './TeamDetails.js';
 
 //Stateless functional component because no state change
-const Router = () => (
+const Router = (props) => (
 	<BrowserRouter>
 		<Switch>
-			<Route path='/' component={App} exact/>
-			<Route path='/teamdetails/:id' component={TeamDetails}/>
+			<Route 
+				path='/' 
+				component={App} 
+				exact
+			/>
+			<Route 
+				path='/teamdetails/:id'
+				render={(props) => <TeamDetails {...props}/>} 
+			/>
 		</Switch>
 	</BrowserRouter>
 );
+
 
 export default Router;
