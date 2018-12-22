@@ -24,7 +24,8 @@ export default class Teams extends Component {
 							</p>
 						<button className="sports_team_button">
 							<Link to={{ 
-								pathname: `/teamdetails/${team.idTeam}` 
+								pathname: `/teamdetails/${team.idTeam}`,
+								state: { team: team } 
 							}}>
 								+ View More
 							</Link>
