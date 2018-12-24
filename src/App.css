@@ -24,10 +24,14 @@
 
 /* HEADER */
 .sports_header_title {
-  background-color: #1D428A;
   color: #fff;
   margin: 0;
   padding: 10px 0;
+  display: inline-flex;
+}
+
+.sports_header {
+  background-color: #1D428A;
 }
 
 /* SEARCH INPUT */
@@ -144,6 +148,22 @@ a:link {
 
 .team_details_text {
   font-weight: normal;
+}
+
+.team_details_button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  float: left;
+  cursor: pointer;
+}
+
+.team_details_back_arrow {
+  float: left;
+  font-size: 40px;
+  margin-left: 10px;
+  padding: 8px 0;
+  color: #fff;
 }
 
 #team_details_about {
