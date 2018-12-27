@@ -7,7 +7,6 @@ import './App.css';
 class App extends Component {
  state = {
   teams: [],
-  filteredTeams: []
  }
  
  componentDidMount() {
@@ -33,19 +32,6 @@ class App extends Component {
     e.preventDefault();
     //Check that button is working with console statement
     console.log('Hello World');
-  }
-
-  filterTeams = (teamFilter) => {
-    const filteredTeams = this.state.teams
-    filteredTeams.filter((team) => {
-      const teamName = team.strTeam.toLowerCase()
-      return teamName.indexOf(
-        teamFilter.toLowerCase()
-      ) !== -1
-    })
-    this.setState({
-      filteredTeams
-    })
   }
 
   render() {
