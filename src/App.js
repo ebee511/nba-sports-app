@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import SearchForm from './components/SearchForm.js'
 import Teams from './components/Teams.js';
 import TeamDetails from './components/TeamDetails.js';
 import './App.css';
 
 class App extends Component {
  state = {
-  teams: []
+  teams: [],
+  filteredTeams: []
  }
  
  componentDidMount() {
@@ -17,7 +17,10 @@ class App extends Component {
     .then(res => {
       const teams = res.data.teams; // Grabs the team data
       if(typeof teams === 'object'){
-        this.setState({ teams }) // Sets state of app
+        this.setState({ 
+          teams, 
+          filteredTeams: teams
+        }) // Sets state of app
       }
     })
     .catch(error => {
@@ -25,12 +28,24 @@ class App extends Component {
     });
   }
 
-
   onInputTyping(e){
     //to prevent from browser reloading again when you click on button
     e.preventDefault();
     //Check that button is working with console statement
     console.log('Hello World');
+  }
+
+  filterTeams = (teamFilter) => {
+    const filteredTeams = this.state.teams
+    filteredTeams.filter((team) => {
+      const teamName = team.strTeam.toLowerCase()
+      return teamName.indexOf(
+        teamFilter.toLowerCase()
+      ) !== -1
+    })
+    this.setState({
+      filteredTeams
+    })
   }
 
   render() {
@@ -40,7 +55,6 @@ class App extends Component {
           <h1 className="sports_header_title">NBA Team Encyclopedia</h1>
         </header>
         <main>
-          <SearchForm {...this.state} onInputTyping={this.onInputTyping}/>
           <Teams {...this.state}/>
         </main>
       </div>
