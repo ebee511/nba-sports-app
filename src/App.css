@@ -25,13 +25,14 @@
 /* HEADER */
 .sports_header_title {
   color: #fff;
-  margin: 0;
+  margin: auto;
   padding: 10px 0;
   display: inline-flex;
 }
 
 .sports_header {
   background-color: #1D428A;
+  display: flex;
 }
 
 /* SEARCH INPUT */
@@ -109,7 +110,7 @@ a:link {
 
 .sports_team_details {
   border: 3px solid red;
-  margin: 50px 60px 0;
+  margin: 50px 60px;
   display: flex;
   flex-wrap: wrap;
   padding: 0 0 30px 30px;
@@ -160,14 +161,58 @@ a:link {
 
 .team_details_back_arrow {
   float: left;
-  font-size: 40px;
+  font-size: 30px;
   margin-left: 10px;
-  padding: 8px 0;
+  padding: 14px 0;
   color: #fff;
 }
 
 #team_details_about {
   width: 80%;
-  margin: auto;
+  height: 300px;
+  margin: 16px auto;
+}
+
+.description_scroll {
+  overflow: scroll;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width:699px) {
+  .sports_team_details {
+    padding: 0 30px 30px 30px;
+  }
+
+  .sports_team_details_img {
+    width: 100%;
+    flex-direction: unset;
+  }
+
+  .team_details_info_container {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+
+  #team_details_about {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .team_details_back_arrow {
+    padding: 14px 5px;
+    margin-left: 0;
+  }
+
+  .sports_team_details {
+    margin: 50px 30px 0;
+  }
+}
+
+@media only screen and (max-width: 413px) {
+  .sports_header_title {
+    font-size: 1.7em;
+  }
 }
 
