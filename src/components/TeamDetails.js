@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faArrowLeft)
 
@@ -10,6 +10,8 @@ const TeamDetails = (props) => {
 	console.log(props);
 
 	const NBATeam = props.location.state.team;
+	const length = NBATeam.strDescriptionEN.length;
+	console.log(length);
 
 	return (
 		<div className='App'>
@@ -42,9 +44,11 @@ const TeamDetails = (props) => {
 			  	<h4 className="sports_team_details_info">
 			  		About 
 			  	</h4>
-		  		<p className="team_details_text" id="team_details_about">
-		  			{NBATeam.strDescriptionEN}
-		  		</p>
+		  		<p 
+		  			id="team_details_about" 
+		  			className={"team_details_text " + (NBATeam.strDescriptionEN.length > 420 ? 'description_scroll' : '')}>
+		  				{NBATeam.strDescriptionEN}
+					</p>
 		  	</div>
 		  </main>
 		</div>
