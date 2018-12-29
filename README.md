@@ -1,44 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NBA Team Encyclopedia
+---
+This is a React web-based application that allows users to view basic information about each NBA (National Basketball Association) team such as where the team is located, who the team manager is, a brief history about the team and a photo related to the team. All data is supplied from The Sports DB. 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
+---
+* [Project-Overview](#project-overview)
+* [Installation](#installation)
+* [Important](#important)
+* [Dependencies](#dependencies)
+* [Contributions](#contributions)
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project-Overview
+---
+For the ***NBA Team Encyclopedia*** app, I started from scratch and used [Create React App](https://github.com/facebookincubator/create-react-app) to build my initial file structure and install the required dependencies. I added [The Sports DB API](https://www.thesportsdb.com) to provide the NBA team data. The other main features of this project include: offline capability, accessibility-friendly, and mobile responsiveness.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+## Installation
+---
+**You will need to have Node.js downloaded in order to use this application. If you do not have it, download it from [here](https://nodejs.org/en/).**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone or download this repository from GitHub to your local machine.
 
-### `npm run build`
+2. Using terminal or a command line, enter the folder directory that was cloned or downloaded and install all project dependencies with the command `npm install`. To start the server, run the command `npm start` and a new window will start up in your browser. In the event a new window does not appear, go to `http://localhost:3000` in your browser. 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Once the app is running, either click on any of the view more buttons below the team logo or type in the input field located right below the header to filter through the list of teams. Clicking on the view more button below a team will take you to the details page of that team. The team details page will display the team name, a photo related to the organization, the team location, team manager, and team description. Due to the length of some of the team descriptions, you may have to scroll to get the full description. 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+4. To return to the home page if you are on the team details page, click on the back arrow. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Important
+---
+This project will only run in development mode currently. It is important you follow the steps provided in [Installation](#Installation).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Dependencies
+---
+* [Create-React-App](https://www.npmjs.com/package/create-react-app) boilerplate for React application.
+* [React Docs](https://reactjs.org/) for React documentation.
+* [TheSportsDB](https://www.thesportsdb.com) for NBA API.
+* [LevelUpTuts](https://www.youtube.com/watch?v=OlVkYnVXPl0&t=201s) for filter feature. 
+* [Medium - Andrew Bonner](https://medium.com/@AndrewBonner2/filter-results-with-react-f746dc7984c
+) for filter feature. 
+* [StackOverflow](https://stackoverflow.com/questions/43323830/react-classname-with-ternary-operator-add-class-null) for ternary JSX explanation. 
+* [FontAwesome](https://www.npmjs.com/package/font-awesome) for arrow icon.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributing
+---
+To contribute, please create a pull request that clearly details any changes made and/or the benefit of the changes that have been made. Provide an example of how this change will enhance the NBA Team Encyclopedia. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you need help to create a pull request, please use proper documentation such as: https://help.github.com/articles/creating-a-pull-request/ or https://help.github.com/articles/creating-a-pull-request-from-a-fork/.
 
-## Learn More
+Changes that fix the format of the code or remove whitespace will be politely declined.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you find a bug, create a GitHub issue, but ensure that this same bug has not already been reported. If you need direction on how to do this, please review: https://help.github.com/articles/creating-an-issue/.
