@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Teams from './components/Teams.js';
-import TeamDetails from './components/TeamDetails.js';
 import './App.css';
 
 class App extends Component {
