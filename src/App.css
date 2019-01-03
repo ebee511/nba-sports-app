@@ -177,6 +177,17 @@ a:link {
   overflow: scroll;
 }
 
+/* SCOREBOARD */
+.scoreboard_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.scoreboard_indiv_game {
+  border: 2px solid black;
+  font-size: 12px;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width:699px) {
   .sports_team_details {
