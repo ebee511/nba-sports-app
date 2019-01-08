@@ -28,6 +28,7 @@ const TeamDetails = (props) => {
 		  </header>
 		  <main className="sports_team_details">
 		  	<h2 className="sports_team_details_title">{NBATeam.strTeam}</h2>
+		  	<Scoreboard {...props}/>
 		  	<img src={NBATeam.strTeamFanart3} alt="NBA Team Fan Art" className="sports_team_details_img"/>
 		  	<div className="team_details_info_container">
 			  	<h4 className="sports_team_details_info">
@@ -51,7 +52,6 @@ const TeamDetails = (props) => {
 		  				{NBATeam.strDescriptionEN}
 					</p>
 		  	</div>
-		  	<Scoreboard {...props}/>
 		  </main>
 		</div>
 	)
