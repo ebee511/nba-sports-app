@@ -134,6 +134,7 @@ a:link {
   flex-wrap: wrap;
   flex-direction: column;
   width: 40%;
+  margin-top: 50px;
 }
 
 .sports_team_details_info {
@@ -186,6 +187,12 @@ a:link {
 .scoreboard_indiv_game {
   border: 2px solid black;
   font-size: 12px;
+  padding: 0 8px;
+  margin: auto 5px;
+}
+
+.scoreboard_date {
+  font-weight: 700;
 }
 
 /* MEDIA QUERIES */
